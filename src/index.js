@@ -7,8 +7,8 @@ var height = 0;
 var lipstickData = null;
 
 function init() {
-    width = window.innerWidth * bgDpi;
-    height = window.innerHeight * bgDpi;
+    width = Math.floor(window.innerWidth * bgDpi);
+    height = Math.floor(window.innerHeight * bgDpi);
 
     var bgDom = document.getElementById('bg');
     bgDom.setAttribute('width', width);
@@ -18,14 +18,16 @@ function init() {
     zrDom.setAttribute('width', window.innerWidth * zrDpi);
     zrDom.setAttribute('height', window.innerHeight * zrDpi);
     zr = zrender.init(zrDom);
-    $.getJSON('lipstick.json', function (data) {
+
+    $.getJSON('dist/lipstick.json', function (data) {
         updateLipstickData(data);
+
         var minMax = getMinMax(lipstickData);
         renderBackground(bgDom, minMax);
         renderDataPoints(lipstickData, minMax);
 
-        // hover({ target: lipstickData[0].group.childAt(0) });
-        // updateUi(lipstickData[0]);
+        hover({ target: lipstickData[0].group.childAt(0) });
+        updateUi(lipstickData[0]);
         document.getElementById('ui').setAttribute('style', 'display:block');
     });
 

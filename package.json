@@ -12,11 +12,12 @@
   "author": "Achry",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "get-pixels": "^3.3.0",
+    "gulp": "^3.9.1",
+    "gulp-jsonminify": "^1.1.0",
+    "gulp-minify": "^2.1.0"
   },
   "dependencies": {
-    "get-pixels": "^3.3.0",
-    "gulp-minify": "^2.1.0",
     "tinycolor2": "^1.4.1",
     "zepto": "^1.2.0",
     "zrender": "^4.0.3"

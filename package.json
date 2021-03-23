@@ -1,0 +1,24 @@
+{
+  "name": "lipstick-vs",
+  "version": "1.0.0",
+  "description": "Lipstick visualization",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lipstick"
+  ],
+  "author": "Achry",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "get-pixels": "^3.3.0",
+    "gulp-minify": "^2.1.0",
+    "tinycolor2": "^1.4.1",
+    "zepto": "^1.2.0",
+    "zrender": "^4.0.3"
+  }
+}
